@@ -1,2 +1,2 @@
-*.xlf
-*.tmx
+data/*
+output/*
