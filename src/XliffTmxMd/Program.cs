@@ -95,7 +95,7 @@ namespace XliffTmxMd
             try
             {
                 extra = p.Parse(args);
-                if (showHelp || extra.Count > 1)
+                if (showHelp || extra.Count > 9)
                 {
                     ShowHelp(p);
                     Environment.Exit(0);
