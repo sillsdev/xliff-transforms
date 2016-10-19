@@ -99,9 +99,7 @@
   -->
   <ItemGroup>
     <XsltFiles Include="$(MSBuildProjectDirectory)\..\..\DistFiles\xslt\*.xsl" />
-    <BatFiles Include="C:\Users\Trihus\git\xliff-transforms\src\XliffTmxMd\..\..\DistFiles\bat\ConvertXliff.bat" />
-    <BatFiles Include="C:\Users\Trihus\git\xliff-transforms\src\XliffTmxMd\..\..\DistFiles\bat\XliffMd.bat" />
-    <BatFiles Include="C:\Users\Trihus\git\xliff-transforms\src\XliffTmxMd\..\..\DistFiles\bat\XliffTmx.bat" />
+    <BatFiles Include="$(MSBuildProjectDirectory)\..\..\DistFiles\bat\*.bat" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="xlf-md.xsl" />
