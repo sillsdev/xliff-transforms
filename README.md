@@ -1,2 +1,4 @@
-# xliff-transforms
-Transforms localization xliff files to TMX (or markdown) 
+XliffTmxMd
+==========
+
+Perform XSLT 2.0 transform to convert Xliff localization files into Tmx or Md files.

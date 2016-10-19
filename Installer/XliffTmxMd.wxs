@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?define Product="XliffTmxMd"?>
+<?define UpgradeCode="A59B860E-307E-4957-9A49-37837D6EE791"?>
+<?define BUILD_NUMBER="1.0.0"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="$(var.Product) $(var.BUILD_NUMBER)" Language="1033" Version="$(var.BUILD_NUMBER)" Manufacturer="SIL International" UpgradeCode="$(var.UpgradeCode)">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion Minimum="$(var.BUILD_NUMBER)" OnlyDetect="yes" Property="NEWVERSIONDETECTED" />
+      <UpgradeVersion Minimum="0.0.0" IncludeMinimum="yes" Maximum="$(var.BUILD_NUMBER)" IncludeMaximum="no" OnlyDetect="no" Property="OLDERVERSIONBEINGUPGRADED" />
+    </Upgrade>
+    <!-- 
+		"from the list: Don't use Advertise="yes" Advertised shortcuts are designed to allow
+		users to install just the shortcut for your app, then demand-install the
+		rest of the app the first time the icon is run.  If this is not behavior you
+		are trying to support, you're better off using non-advertised shortcuts. "
+		-->
+    <Media Id="1" Cabinet="XliffTmxMd.cab" EmbedCab="yes" CompressionLevel="high" />
+    <Property Id="DISABLEADVTSHORTCUTS" Value="1" />
+    <Feature Id="ProgramFiles" Level="1" Absent="disallow" Title="Program Files">
+      <ComponentGroupRef Id="Application" />
+    </Feature>
+    <DirectoryRef Id="TARGETDIR">
+      <Directory Id="ProgramMenuFolder" ShortName="Programs">
+        <Directory Id="XliffTmxMdMenu" Name="$(var.Product) $(var.BUILD_NUMBER)">
+          <Component Id="BatMenuShortcuts" Guid="A1E80C63-CB1C-4F74-A07A-990976E9B6C0">
+            <Shortcut Id="AppMenuShortcut" Name="XliffTmxMd Shortcuts" Target="[xlifftmxmd_scripts]" Hotkey="0"/>
+            <RemoveFolder Id="RemoveXliffTmxMdMenu" Directory="XliffTmxMdMenu" On="uninstall"/>
+            <RegistryValue Root="HKCU" Key="Software\SIL\XliffTmxMd" Name="BatMenuShortcuts" Type="string" Value="[xlifftmxmd_scripts]"/>
+          </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" >
+        <Component Id="BatDeskShortcuts" Guid="291D749C-5E8B-49EE-B79C-22830D4AF1C9">
+          <Shortcut Id="AppDeskShortcut" Name="XliffTmxMd Shortcuts" Target="[xlifftmxmd_scripts]" Hotkey="0"/>
+          <RegistryValue Root="HKCU" Key="Software\SIL\XliffTmxMd" Name="BatDeskShortcuts" Type="string" Value="[xlifftmxmd_scripts]"/>
+        </Component>
+      </Directory>
+      <Component Id="RegistryEntries" Guid="B1253422-4DE8-437D-BCF6-B105FFC6D437" KeyPath="yes">
+        <RegistryValue Root="HKLM" Key="Software\SIL\XliffTmxMd" Name="XliffTmxMdDir" Type="string" Value="[APPLICATIONFOLDER]" />
+        <RemoveFolder Id="RemoveXliffTmxMdDir" Directory="APPLICATIONFOLDER" On="uninstall"/>
+      </Component>
+    </DirectoryRef>
+    <!-- Icon Id="XliffTmxMdIcon.ico" SourceFile="..\output\Release\XliffTmxMdIcon.ico" / -->
+    <!-- Property Id="ARPPRODUCTICON" Value="XliffTmxMdIcon.ico" / -->
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+    <!-- WixVariable Id="WixUIDialogBmp" Value="bannrbmp.bmp" / -->
+    <!-- WixVariable Id="WixUIBannerBmp" Value="dlgbmp.bmp" / -->
+    <Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONFOLDER" />
+    <UIRef Id="WixUI_InstallDir" />
+    <InstallExecuteSequence>
+      <RemoveExistingProducts After="InstallInitialize" />
+      <!--We need the condition here so that we only launch the executable when we make an installation but not when we remove the product-->
+    </InstallExecuteSequence>
+  </Product>
+</Wix>

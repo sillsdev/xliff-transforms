@@ -1,2 +1,27 @@
 data/*
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Executables
 output/*
+packages/*
+*/bin/*
+*/obj/*
+*/*/bin/*
+*/*/obj/*
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Generated
+Installer/Application.wxs
+.vs/*
+*.suo
+*/*/*.user

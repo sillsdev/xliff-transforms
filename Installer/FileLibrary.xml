@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileLibrary>
+  <File Path="XliffTmxMd Scripts\ConvertXliff.bat" ComponentGuid="78D24170-4E38-4C6F-98FA-B1406A27FDB1" />
+  <File Path="XliffTmxMd Scripts\XliffMd.bat" ComponentGuid="C5B37F5D-D4C5-4043-8CBF-D114073B130D" />
+  <File Path="XliffTmxMd Scripts\XliffTmx.bat" ComponentGuid="A690B5DA-365F-4F6A-8EF5-3F26405E8CD2" />
+  <File Path="IKVM.OpenJDK.Charsets.dll" ComponentGuid="1AEA0EDD-FCAE-440B-813F-6E76B0B82C8F" />
+  <File Path="IKVM.OpenJDK.Core.dll" ComponentGuid="DE5E78E5-52B5-42B3-8AF5-343AA17B122C" />
+  <File Path="IKVM.OpenJDK.Text.dll" ComponentGuid="BACF31BD-6275-489F-AA33-070F161484DC" />
+  <File Path="IKVM.OpenJDK.Util.dll" ComponentGuid="74D33BA2-A624-4D97-A53E-6D3BF93F85A6" />
+  <File Path="IKVM.OpenJDK.XML.API.dll" ComponentGuid="A3BFEBDA-E4C7-4413-A354-4BFB9DFF93FC" />
+  <File Path="IKVM.Runtime.dll" ComponentGuid="99ECE899-EA8D-49EF-9F13-A446C7DF8D28" />
+  <File Path="saxon9he-api.dll" ComponentGuid="1E666478-AE0C-481D-ACA8-EC954D2784A5" />
+  <File Path="saxon9he-api.xml" ComponentGuid="07ABEC0A-9118-4F01-B629-3A4480E5DA23" />
+  <File Path="saxon9he.dll" ComponentGuid="8CFC1827-2412-4A35-AF03-E738032ADDBF" />
+  <File Path="XliffTmxMd.exe" ComponentGuid="2092805D-587E-4A63-9D0B-35157C87EE63" />
+  <File Path="XliffTmxMd.exe.config" ComponentGuid="8AF12B31-C24F-44C4-88F0-7B6B24B70B4B" />
+  <File Path="XliffTmxMd.pdb" ComponentGuid="6010DC3B-D37A-4971-A7D7-386D671B8F66" />
+  <File Path="XliffTmxMd.vshost.exe" ComponentGuid="91490335-26F9-47BE-B2AB-4EC708F324BE" />
+  <File Path="XliffTmxMd.vshost.exe.config" ComponentGuid="E689B2B1-F8C7-42ED-BD3D-CA213C9FE9A5" />
+  <File Path="XliffTmxMd.vshost.exe.manifest" ComponentGuid="FAE9BAF3-B617-44DC-B43B-4689277E8AFF" />
+  <File Path="xlf-md.xsl" ComponentGuid="B887538C-C7E3-4D62-A454-B926E51A47C4" />
+  <File Path="xlf-tmx.xsl" ComponentGuid="E7CF96CC-15F4-4D28-9361-298BBECB9666" />
+</FileLibrary>

@@ -10,6 +10,36 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>data/Decodeable%20Reader%20ReadMe-bn.xlf</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TXT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/Bloom-bn.xlf</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TMX</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>data/TrainingVideos-id.xlf</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -416,89 +446,6 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>xlf-tmx</String>
-                                </field>
-                                <field name="baseURL">
-                                    <String></String>
-                                </field>
-                                <field name="footerURL">
-                                    <String></String>
-                                </field>
-                                <field name="fOPMethod">
-                                    <String>pdf</String>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <String>Apache FOP</String>
-                                </field>
-                                <field name="headerURL">
-                                    <String></String>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <String>${pdu}/xlf-tmx.xsl</String>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <String>${pdu}/Palaso-ne.xlf</String>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>XSL</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputFile">
-                                    <File>${pd}/Palaso.ne.tmx</File>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <null/>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>Saxon6.5.5</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array/>
-                                </field>
-                            </scenario>
-                            <scenario>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
                                     <String>TXT</String>
                                 </field>
                                 <field name="baseURL">
@@ -577,6 +524,89 @@
                                     <String-array/>
                                 </field>
                             </scenario>
+                            <scenario>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>xlf-tmx</String>
+                                </field>
+                                <field name="baseURL">
+                                    <String></String>
+                                </field>
+                                <field name="footerURL">
+                                    <String></String>
+                                </field>
+                                <field name="fOPMethod">
+                                    <String>pdf</String>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <String>Apache FOP</String>
+                                </field>
+                                <field name="headerURL">
+                                    <String></String>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <String>${pdu}/xlf-tmx.xsl</String>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <String>${pdu}/Palaso-ne.xlf</String>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>XSL</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="outputFile">
+                                    <File>${pd}/Palaso.ne.tmx</File>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <null/>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>Saxon6.5.5</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array/>
+                                </field>
+                            </scenario>
                         </scenario-array>
                     </entry>
                 </map>
@@ -584,18 +614,16 @@
         </options>
     </meta>
     <projectTree name="xlf-tmx.xpr">
-        <file name="data/Bloom-id.xlf"/>
-        <file name="data/Bloom-ne.xlf"/>
-        <file name="data/Decodeable%20Reader%20ReadMe-id.xlf"/>
-        <file name="data/Factory-XMatter%20description-id.xlf"/>
-        <file name="data/IntegrityFailureAdvice-id.xlf"/>
-        <file name="data/Leveled%20Reader%20ReadMe-id.xlf"/>
-        <file name="data/LeveledReaderInfo-id.xlf"/>
-        <file name="data/Palaso-id.xlf"/>
-        <file name="data/Palaso-ne.xlf"/>
-        <file name="data/Traditional-XMatter%20description-id.xlf"/>
-        <file name="data/TrainingVideos-id.xlf"/>
-        <file name="xlf-md.xsl"/>
-        <file name="xlf-tmx.xsl"/>
+        <file name="data/Bloom-bn.xlf"/>
+        <file name="data/Decodeable%20Reader%20ReadMe-bn.xlf"/>
+        <file name="data/Factory-XMatter%20description-bn.xlf"/>
+        <file name="data/IntegrityFailureAdvice-bn.xlf"/>
+        <file name="data/Leveled%20Reader%20ReadMe-bn.xlf"/>
+        <file name="data/LeveledReaderInfo-bn.xlf"/>
+        <file name="data/Palaso-bn.xlf"/>
+        <file name="data/Traditional-XMatter%20description-bn.xlf"/>
+        <file name="data/TrainingVideos-bn.xlf"/>
+        <file name="src/XliffTmxMd/xlf-md.xsl"/>
+        <file name="src/XliffTmxMd/xlf-tmx.xsl"/>
     </projectTree>
 </project>
