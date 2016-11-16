@@ -13,6 +13,7 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:2.0"
     version="2.0">
 
+    <xsl:param name="outputBase"/>
     <xsl:output indent="yes"/>
     <xsl:variable name="src" select="string(/*/@srcLang)"/>
     <xsl:variable name="trg" select="string(/*/@trgLang)"/>
@@ -22,7 +23,7 @@
     </xsl:template>
 
     <xsl:template match="file | xliff:file">
-        <xsl:result-document href="{@original}">
+        <xsl:result-document href="{concat($outputBase,@original)}" encoding="utf-8" method="xml" indent="yes">
             <xsl:element name="tmx">
                 <xsl:attribute name="version">1.4</xsl:attribute>
                 <xsl:element name="header">
@@ -88,16 +89,18 @@
                     </xsl:for-each>
                 </xsl:element>
             </xsl:element>
-            <xsl:element name="tuv">
-                <xsl:attribute name="xml:lang">
-                    <xsl:value-of select="$trg"/>
-                </xsl:attribute>
-                <xsl:element name="seg">
-                    <xsl:for-each select=".//target | .//xliff:target">
-                        <xsl:value-of select="."/>
-                    </xsl:for-each>
-                </xsl:element>
-            </xsl:element>
+            <xsl:if test="$src != $trg">
+              <xsl:element name="tuv">
+                  <xsl:attribute name="xml:lang">
+                      <xsl:value-of select="$trg"/>
+                  </xsl:attribute>
+                  <xsl:element name="seg">
+                      <xsl:for-each select=".//target | .//xliff:target">
+                          <xsl:value-of select="."/>
+                      </xsl:for-each>
+                  </xsl:element>
+              </xsl:element>
+            </xsl:if>
         </xsl:element>
     </xsl:template>
 

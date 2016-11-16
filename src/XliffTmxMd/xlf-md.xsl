@@ -13,6 +13,9 @@
     xmlns:xliff="urn:oasis:names:tc:xliff:document:2.0"
     version="2.0">
 
+    <xsl:variable name="src" select="string(/*/@srcLang)"/>
+    <xsl:variable name="trg" select="string(/*/@trgLang)"/>
+
     <xsl:output omit-xml-declaration="yes" />
 
     <xsl:template match="/">
@@ -28,6 +31,9 @@
     <xsl:template match="unit | xliff:unit">
         <xsl:for-each select="*">
             <xsl:choose>
+                <xsl:when test="$src = $trg">
+                    <xsl:value-of select="source | xliff:source"/>
+                </xsl:when>
                 <xsl:when test="target | xliff:target">
                     <xsl:variable name="val" select="target | xliff:target"/>
                     <xsl:value-of select="replace(normalize-space($val),'\\t','&#9;')"/>
