@@ -32,7 +32,7 @@
         <xsl:for-each select="*">
             <xsl:choose>
                 <xsl:when test="$src = $trg">
-                    <xsl:value-of select="source | xliff:source"/>
+                    <xsl:value-of select="replace(normalize-space(source | xliff:source),'\\t','&#9;')"/>
                 </xsl:when>
                 <xsl:when test="target | xliff:target">
                     <xsl:variable name="val" select="target | xliff:target"/>
@@ -42,7 +42,7 @@
                     </xsl:if>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="source | xliff:source"/>
+                    <xsl:value-of select="replace(normalize-space(source | xliff:source),'\\t','&#9;')"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
