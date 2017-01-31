@@ -68,9 +68,9 @@
             <xsl:for-each select="notes/note | xliff:notes/xliff:note">
                 <xsl:choose>
                     <xsl:when test="contains(., '&lt;')">
-                        <xsl:text>&#10;         </xsl:text>
+                        <xsl:text>&#10;      </xsl:text>
                         <xsl:value-of select="." disable-output-escaping="yes"/>
-                        <xsl:text>&#10;         </xsl:text>
+                        <xsl:text>&#10;      </xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:element name="note">
